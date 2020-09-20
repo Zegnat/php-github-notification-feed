@@ -1,0 +1,16 @@
+{
+    "name": "zegnat/github-notification-feed",
+    "description": "Generating a feed from GitHub notifications.",
+    "type": "project",
+    "license": "0BSD",
+    "authors": [
+        {
+            "name": "Martijn van der Ven",
+            "email": "martijn@vanderven.se"
+        }
+    ],
+    "require": {
+        "symfony/http-client": "^5.1",
+        "debril/feed-io": "^4.7"
+    }
+}
