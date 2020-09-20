@@ -54,6 +54,7 @@ foreach ($notifications as $notification) {
     $author->setName($notification->repository->full_name);
     $author->setUri($notification->repository->html_url);
     $item->setAuthor($author);
+    $item->setLastModified(new DateTime($notification->updated_at));
     $feed->add($item);
 }
 
