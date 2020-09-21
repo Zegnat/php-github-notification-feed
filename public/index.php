@@ -36,6 +36,7 @@ try {
 // Rewrite REST API object links to functioning public-web links.
 function rewriteLink(string $url, ?string $comment = null): string {
     $url = str_replace('https://api.github.com/repos/', 'https://github.com/', $url);
+    $url = preg_replace('@(github\.com\/[^/]+\/[^/]+\/)pulls\/@', '$1issues/', $url, 1);
     if (null !== $comment && 1 === preg_match('@\/(\d+)$@', $comment, $commentId)) {
         $url .= '#issuecomment-' . $commentId[1];
     }
